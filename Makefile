@@ -11,8 +11,8 @@ all : $(BINARIES)
 
 LIBS := -lach -lrt -lm -lc
 
-hubo-ach2: src/hubo-ach2.cpp
-	$(CXX) $(CFLAGS) -o $@ $< $(LIBS)
+hubo-ach2: src/hubo-ach2.c
+	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
 
 
 clean:

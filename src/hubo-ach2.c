@@ -72,6 +72,14 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // Timing info
 #define NSEC_PER_SEC    1000000000
 
+#define MY_PRIORITY (49)/* we use 49 as the PRREMPT_RT use 50
+			    as the priority of kernel tasklets
+			    and interrupt handler by default */
+
+#define MAX_SAFE_STACK (1024*1024) /* The maximum stack size which is
+				   guaranteed safe to access without
+				   faulting */
+
 
 void stack_prefault(void);
 static inline void tsnorm(struct timespec *ts);
